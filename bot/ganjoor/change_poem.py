@@ -18,10 +18,8 @@ def init(dispatcher: Dispatcher, ganjoor: Ganjoor):
 
 def change_poem(update: Update, context: CallbackContext, ganjoor: Ganjoor):
     query = update.callback_query
-    print("THIS IS QUERY"+query.data)
     poem_id = query.data.split('_')[2]
     message_id = '_'.join(query.data.split('_')[3:])
-    print(message_id)
     poem = ganjoor.find_poem_by_id(
         poem_id, navigation=True, images=True, recitations=True, songs=True)
     query.answer()

@@ -25,7 +25,6 @@ def chosen_song(update: Update, context: CallbackContext, ganjoor: Ganjoor):
     song = [song for song in poem.songs if str(song.id) == str(song_id)][0]
     track_url = song.track_url
     audio_url = None
-    print(InputMediaAudio(song.track_url))
     if 'beeptunes' in track_url:
         audio_url = get_beeptunes_preview(track_url)
     elif 'spotify' in track_url:
@@ -34,7 +33,6 @@ def chosen_song(update: Update, context: CallbackContext, ganjoor: Ganjoor):
     elif 'golha' in track_url:
         audio_url = get_golha_song(track_url)
     if audio_url:
-        print(update.chosen_inline_result.inline_message_id)
         context.bot.edit_message_media(
             inline_message_id=update.chosen_inline_result.inline_message_id, media=InputMediaAudio(
                 media=audio_url,

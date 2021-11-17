@@ -9,6 +9,7 @@ inflection = "*"
 requests = "*"
 python-dotenv = "*"
 ganjoor-api-wrapper = {editable = true, git = "https://github.com/MmeK/ganjoor_api_wrapper"}
+gunicorn = "*"
 
 [dev-packages]
 pylint = "*"
