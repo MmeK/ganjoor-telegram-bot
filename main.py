@@ -69,7 +69,6 @@ def app():
     if settings.WEBHOOK:
         signal.signal(signal.SIGINT, graceful_exit)
         updater.start_webhook(**settings.WEBHOOK_OPTIONS)
-        updater.bot.set_webhook(url=settings.WEBHOOK_URL)
     else:
         updater.start_polling()
 
