@@ -24,7 +24,7 @@
 ![faal](/assets/images/showcase/faal.png)
 ![poet](/assets/images/showcase/poet.png)
 
-### Roamap:
+### Roadmap:
 
 - Adding new poets and poems
 - Sending Recications and Comments to Ganjoor for poems
