@@ -107,8 +107,6 @@ venv.bak/
 .vscode/
 
 
-# Configurations
-configurations/
 ganjoor_cache.sqlite
 
 test.py

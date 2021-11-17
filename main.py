@@ -53,7 +53,7 @@ def graceful_exit(*args, **kwargs):
     sys.exit(1)
 
 
-if __name__ == "__main__":
+def app():
     global updater
     logger.init_logger(f'logs/{settings.NAME}.log')
 
@@ -72,3 +72,7 @@ if __name__ == "__main__":
         updater.bot.set_webhook(url=settings.WEBHOOK_URL)
     else:
         updater.start_polling()
+
+
+if __name__ == "__main__":
+    app()
