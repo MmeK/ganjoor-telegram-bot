@@ -4,13 +4,16 @@ load_dotenv()
 
 TOKEN = environ.get('TELEGRAM_TOKEN')
 URL = environ.get("WEBHOOK_URL")
+PORT = int(environ.get('PORT', 8443))
+
 NAME = "ganjoor_bot"
 WEBHOOK = True
+WEBHOOK_URL = f'{URL}/{TOKEN}'
 
 WEBHOOK_OPTIONS = {
     'listen': '0.0.0.0',
-    'port': 443,
+    'port': PORT,
     'url_path': TOKEN,
+    'webhook_url': WEBHOOK_URL
 }
-WEBHOOK_URL = f'{URL}/{WEBHOOK_OPTIONS["url_path"]}'
 CACHE_TIME = 3600
