@@ -49,13 +49,19 @@
 - Clone this repo
 - Install pipenv if you don't have it
 - Install dependencies
+- Change .env.example to .env
 
 ```shell
 $ git clone https://github.com/MmeK/ganjoor-telegram-bot.git
 $ pip install pipenv
 $ cd ganjoor-telegram-bot
 $ pipenv install
+$ mv .env.example .env
 ```
+
+- Set your Telegram API Token inside .env
+
+---
 
 ## License
 
