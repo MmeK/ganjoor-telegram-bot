@@ -1,1 +1,1 @@
-web: python main.py
+web: pipenv run python3 main.py
