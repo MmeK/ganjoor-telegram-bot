@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-telegram-bot = ">=12.0.0"
+inflection = "*"
+requests = "*"
+python-dotenv = "*"
+ganjoor-api-wrapper = {editable = true, git = "https://github.com/MmeK/ganjoor_api_wrapper"}
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+flake8 = "*"
+
+[requires]
+python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true
